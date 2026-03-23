@@ -113,8 +113,6 @@ print("query: {}".format(result["result"]["query"]))
 # ── Logika biznesowa na podstawie wykrytej intencji ───────────────────────────
 # Tu zaczyna się właściwa aplikacja - CLU zwrócił intencję, teraz reagujemy
 # Warunek sprawdza czy topIntent to "resetPassword"
-# UWAGA: warunek jest nadmiarowy - top_intent i result["result"]["prediction"]["topIntent"]
-# to ta sama wartość (top_intent już ją przechowuje), wystarczy: if top_intent == 'resetPassword'
 if top_intent  == 'resetPassword':
     print("Tak już admin wiem i zmieni Ci hasło")
     # Tu wywołałbyś właściwą akcję biznesową np.:
